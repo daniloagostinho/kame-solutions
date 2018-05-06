@@ -4,8 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4b2cad2df2ca4fa1b327d7b74be6bee3" Name="Diagram1">
-        <EntityTypeShape EntityType="webapiModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="1d1f0aaea8004469b540cf047883de15" Name="Diagram1">
+        <EntityTypeShape EntityType="UserDBLocalModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.HACK_CLIENTE" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.HACK_EMAIL" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.HACK_END" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.HACK_LOTE" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.HACK_TELEFONE" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.LOTE_FINAL" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.LOTE_TRATATIVA" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.Role" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.User" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.UserClaim" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="UserDBLocalModel.UserLogin" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="UserDBLocalModel.FK_EMAIL_ID_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDBLocalModel.FK_END_ID_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDBLocalModel.FK_TEL_ID_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDBLocalModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDBLocalModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="UserDBLocalModel.UserRole" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

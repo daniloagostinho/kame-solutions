@@ -12,11 +12,13 @@ namespace WebAPI.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class webapiEntities : DbContext
+    public partial class UserDBLocalEntities : DbContext
     {
-        public webapiEntities()
-            : base("name=webapiEntities")
+        public UserDBLocalEntities()
+            : base("name=UserDBLocalEntities")
         {
         }
     
@@ -25,6 +27,22 @@ namespace WebAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<HACK_CLIENTE> HACK_CLIENTE { get; set; }
+        public virtual DbSet<HACK_EMAIL> HACK_EMAIL { get; set; }
+        public virtual DbSet<HACK_END> HACK_END { get; set; }
+        public virtual DbSet<HACK_LOTE> HACK_LOTE { get; set; }
+        public virtual DbSet<HACK_TELEFONE> HACK_TELEFONE { get; set; }
+        public virtual DbSet<LOTE_FINAL> LOTE_FINAL { get; set; }
+        public virtual DbSet<LOTE_TRATATIVA> LOTE_TRATATIVA { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserClaim> UserClaims { get; set; }
+        public virtual DbSet<UserLogin> UserLogins { get; set; }
+    
+        public virtual int SP_TRATA_BASE()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SP_TRATA_BASE");
+        }
     }
 }
